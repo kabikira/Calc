@@ -30,3 +30,13 @@ class Calculator {
     }
 
 }
+
+// Equtableに準拠していないと比較できない
+struct Dog {
+    var name: String
+    var age: Int
+}
+// Global function 'XCTAssertNotEqual(_:_:_:file:line:)' requires that 'Dog' conform to 'Equatable'を解決する
+extension Dog: Equatable{}
+
+// オブジェクト
