@@ -36,6 +36,7 @@ class CalculatorTests: XCTestCase {
     func testDivision() {
         XCTAssertEqual(clculator.division(6, 2), 3)
     }
+
 }
 
 final class CalcTests: XCTestCase {
@@ -54,6 +55,32 @@ final class CalcTests: XCTestCase {
         // Any test you write for XCTest can be annotated as throws and async.
         // Mark your test throws to produce an unexpected failure when your test encounters an uncaught error.
         // Mark your test async to allow awaiting for asynchronous code to complete. Check the results with assertions afterwards.
+
+        // Boolを判定
+        let string = "Hello"
+        XCTAssertTrue(string.hasPrefix("He"))
+        XCTAssertFalse(string.isEmpty)
+
+        // nilを判定
+        let notNumber = Int("Hello")
+        XCTAssertNil(notNumber)
+
+        let number = Int("42")
+        XCTAssertNotNil(number)
+
+        // 等値性を判定する
+        let string2 = "Hello"
+
+        XCTAssertEqual(string, "Hello")
+        XCTAssertNotEqual(string, "Goodbye")
+
+        // Equtableに準拠していないと比較できない
+
+
+        let dog1 = Dog(name: "ポチ", age: 3)
+        let dog2 = Dog(name: "ジョン", age: 4)
+
+        XCTAssertNotEqual(dog1, dog2)
     }
 
     func testPerformanceExample() throws {
