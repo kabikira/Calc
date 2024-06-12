@@ -8,6 +8,24 @@
 import XCTest
 @testable import Calc
 
+// 独自のアサーション
+//func assertEmpty(_ string: String) {
+//    XCTAssertTrue(string.isEmpty, "\(string)\" is not empty")
+//}
+func assertEmpty(_ string: String,
+                 file: StaticString = #file,
+                 line: UInt = #line) {
+    XCTAssertTrue(string.isEmpty, "\"\(string)\" is not empty", file: file, line: line)
+}
+
+class OriginalAssertionTests: XCTestCase {
+
+    func testAsserEmpty() {
+        let string = "hello"
+        assertEmpty(string)
+    }
+}
+
 class CalculatorTests: XCTestCase {
 
     var clculator: Calculator!
