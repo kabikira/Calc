@@ -39,4 +39,7 @@ struct Dog {
 // Global function 'XCTAssertNotEqual(_:_:_:file:line:)' requires that 'Dog' conform to 'Equatable'を解決する
 extension Dog: Equatable{}
 
-// オブジェクト
+// オブジェクトの参照が等しいことうぃ検証する
+class Cat {}
+
+

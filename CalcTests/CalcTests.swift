@@ -81,6 +81,13 @@ final class CalcTests: XCTestCase {
         let dog2 = Dog(name: "ジョン", age: 4)
 
         XCTAssertNotEqual(dog1, dog2)
+
+        let cat1 = Cat()
+        let cat2 = cat1
+        XCTAssertTrue(cat1 === cat2)
+
+        let cat3 = Cat()
+        XCTAssertTrue(cat1 !== cat3)
     }
 
     func testPerformanceExample() throws {
