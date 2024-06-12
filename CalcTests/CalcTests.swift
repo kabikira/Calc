@@ -8,6 +8,29 @@
 import XCTest
 @testable import Calc
 
+// テスト階層化
+class SafeDivisionTest: XCTestCase {
+    func testSafeDivisionRunActivityNest() {
+
+        XCTContext.runActivity(named: "通常の割り算") { _ in
+            XCTAssertEqual(safeDivision(6, 3), 2)
+            XCTAssertEqual(safeDivision(6, 2), 3)
+        }
+
+        XCTContext.runActivity(named: "0除算") { _ in
+            XCTAssertNil(safeDivision(6,0))
+        }
+        
+        // ネストできる
+        XCTContext.runActivity(named: "通常の割り算") { _ in
+            XCTContext.runActivity(named: "6 / 3 = 2") { _ in
+                XCTAssertEqual(safeDivision(6, 3), 2)
+            }
+        }
+    }
+}
+
+
 // 独自のアサーション
 //func assertEmpty(_ string: String) {
 //    XCTAssertTrue(string.isEmpty, "\(string)\" is not empty")

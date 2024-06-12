@@ -43,3 +43,11 @@ extension Dog: Equatable{}
 class Cat {}
 
 
+// テスト階層化
+func safeDivision(_ x: Int, _ y: Int) -> Int? {
+    if y == 0 {
+        return nil
+    } else {
+        return x / y
+    }
+}
