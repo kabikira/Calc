@@ -51,3 +51,17 @@ func safeDivision(_ x: Int, _ y: Int) -> Int? {
         return x / y
     }
 }
+
+// 非同期なAPIのテスト
+func echo(message: String, _ handler: @escaping (String) -> Void) {
+    DispatchQueue.global().async {
+
+        // 3秒間待機
+        Thread.sleep(forTimeInterval: 3)
+
+        // 末尾に｢!｣をつけてコールバックで呼び出し
+        DispatchQueue.main.async {
+            handler("\(message)!")
+        }
+    }
+}

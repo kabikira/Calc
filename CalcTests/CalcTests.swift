@@ -8,6 +8,34 @@
 import XCTest
 @testable import Calc
 
+// 非同期のテスト
+class EchoTest: XCTestCase {
+    // 間違ったテスト これでも失敗にならない
+//    func testEcho() {
+//        echo(message: "Hello") { (message) in
+//            XCTFail()
+//        }
+//    }
+    // 正しいテストコード
+    func testEcho() {
+
+        // 待機用
+        let exp: XCTestExpectation = expectation(description: "wait for finish")
+
+        echo(message: "Hello") { (messge) in
+            XCTAssertEqual(messge, "Hello!")
+//            XCTFail()
+
+            // expの待機を解除
+            exp.fulfill()
+        }
+
+        // expに対してfullfill()が呼び出されるまで待機(5秒でタイムアウト)
+        // 非同期のechoメソッドの完了を確認するため5秒待機
+        wait(for: [exp], timeout: 5)
+    }
+}
+
 // テスト階層化
 class SafeDivisionTest: XCTestCase {
     func testSafeDivisionRunActivityNest() {
