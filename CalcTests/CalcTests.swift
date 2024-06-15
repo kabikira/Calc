@@ -8,6 +8,41 @@
 import XCTest
 @testable import Calc
 
+class DateFunctionsTests: XCTestCase {
+    // Note
+    // このテストは平日しかうごかない
+    func testIsWorddayBad() {
+        XCTAssertFalse(isHoliday())
+    }
+
+    // 引数に任意の日付を与えてテストする
+    func testIsHolidayGood() {
+        // 日付文字列(yyyy/MM/dd)からDateを生成できるようにする
+        let formatter = DateFormatter()
+        formatter.dateFormat = "yyyy/MM/dd"
+
+        // テスト用の日付を格納する一時変数
+        var date: Date!
+
+        // 境界値となる曜日を対象としテストコードを書く
+        // 日曜日
+        date = formatter.date(from: "2024/06/16")
+        XCTAssertTrue(isHoliday(date))
+
+        // 月曜日
+        date = formatter.date(from: "2024/06/17")
+        XCTAssertFalse(isHoliday(date))
+
+        // 金曜日
+        date = formatter.date(from: "2024/06/21")
+        XCTAssertFalse(isHoliday(date))
+
+        // 土曜日
+        date = formatter.date(from: "2024/06/22")
+        XCTAssertTrue(isHoliday(date))
+    }
+}
+
 // 非同期のテスト
 class EchoTest: XCTestCase {
     // 間違ったテスト これでも失敗にならない

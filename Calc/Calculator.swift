@@ -65,3 +65,28 @@ func echo(message: String, _ handler: @escaping (String) -> Void) {
         }
     }
 }
+
+//外部環境に依存したテスト
+//func isHoliday() -> Bool {
+//
+//    // 現在時刻の取得
+//    let now = Date()
+//
+//    // 何番目の曜日か取得
+//    let calendar = Calendar.current
+//    let weekday = calendar.component(.weekday, from: now)
+//
+//    // 日曜または土曜であれば true
+//    return weekday == 1 || weekday == 7
+//}
+
+// デフォルト引数を活用
+func isHoliday(_ date: Date = Date()) -> Bool {
+
+    // 何番目の曜日か取得
+    let calendar = Calendar.current
+    let weekday = calendar.component(.weekday, from: date)
+
+    // 日曜または土曜であれば true
+    return weekday == 1 || weekday == 7
+}
