@@ -90,3 +90,39 @@ func isHoliday(_ date: Date = Date()) -> Bool {
     // 日曜または土曜であれば true
     return weekday == 1 || weekday == 7
 }
+
+// 現在時刻を取得するインターフェースとしてProtocolを定義
+protocol DateProtocol {
+    func now() -> Date
+}
+
+// 実際にリリースするアプリで利用する｢本物｣のクラスを実装
+class DateDefault: DateProtocol {
+    func now() -> Date {
+        return Date()
+    }
+}
+
+// isHoliday()メソッドが定義されたクラスを定義
+class CalendarUtil {
+
+    // 内部でDateProtocolへの依存を持つ
+    let dateProtocl: DateProtocol
+
+    // 補機数でDateProtocolを受け取れるように(デフォルトではDateDefaultを利用)
+    init(dateProtocl: DateProtocol = DateDefault()) {
+        self.dateProtocl = dateProtocl
+    }
+
+    // これまでと同じ仕様を持つisHoliday()メソッド
+    func isHoliday() -> Bool {
+
+        // DateProtocolを経由して現在の時刻を取得
+        let now = dateProtocl.now()
+
+        let calendar = Calendar.current
+        let weekday = calendar.component(.weekday, from: now)
+
+        return weekday == 1 || weekday == 7
+    }
+}

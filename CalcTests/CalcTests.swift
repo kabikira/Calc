@@ -8,6 +8,46 @@
 import XCTest
 @testable import Calc
 
+// テストように任意の日付を返すように設定できる｢偽物｣であるモック
+struct MockDateProtocol: DateProtocol {
+
+    // このプロパティに設定した値がnow()で返却される
+    var date: Date? = nil
+
+    func now() -> Date {
+        return date!
+    }
+}
+
+// CalendarUtilに対するテストクラス
+class CalendarUtilTests: XCTestCase {
+    func testIsHoliday() {
+
+        let formatter = DateFormatter()
+        formatter.dateFormat = "yyyy/MM/dd"
+
+        // CalendarUtil 生成時にテスト用として渡すモックを生成
+        var mock = MockDateProtocol()
+
+        // 以前のテストと同様にテストしたい日付をモックに設定しながらテスト
+        // 日曜日
+        mock.date = formatter.date(from: "2024/06/16")
+        XCTAssertTrue(CalendarUtil(dateProtocl: mock).isHoliday())
+
+        // 月曜日
+        mock.date = formatter.date(from: "2024/06/17")
+        XCTAssertFalse(CalendarUtil(dateProtocl: mock).isHoliday())
+
+        // 金曜日
+        mock.date = formatter.date(from: "2024/06/21")
+        XCTAssertFalse(CalendarUtil(dateProtocl: mock).isHoliday())
+
+        // 土曜日
+        mock.date = formatter.date(from: "2024/06/22")
+        XCTAssertTrue(CalendarUtil(dateProtocl: mock).isHoliday())
+    }
+}
+
 class DateFunctionsTests: XCTestCase {
     // Note
     // このテストは平日しかうごかない
