@@ -11,24 +11,23 @@ class ViewController: UIViewController, UITableViewDataSource {
 
     var manager: GitHubRepositoryManager!
 
-    @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var tableView: UITableView! {
+        didSet {
+            self.tableView.register(UINib.init(nibName: Cell.className, bundle: nil), forCellReuseIdentifier: Cell.className)
+            self.tableView.dataSource = self
+        }
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.tableView.register(UINib.init(nibName: Cell.className, bundle: nil), forCellReuseIdentifier: Cell.className)
-        self.tableView.dataSource = self
-
         self.manager = GitHubRepositoryManager()
         self.manager.load(user: "apple") { [weak self] in
-            print("Repositories loaded: \(self?.manager.majorRepoditories.count ?? 0)")  // デバッグプリント
-
             self?.tableView?.reloadData()
         }
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         let count = self.manager.majorRepoditories.count
-        print("Number of rows: \(count)")  // デバッグプリント
         return count
     }
 
@@ -38,7 +37,6 @@ class ViewController: UIViewController, UITableViewDataSource {
         }
         let repository = self.manager.majorRepoditories[indexPath.row]
         cell.configure(gitHubRepository: repository)
-        print("Configured cell for row \(indexPath.row)")  // デバッグプリント
         return cell
     }
 }
