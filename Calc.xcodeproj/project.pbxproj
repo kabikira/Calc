@@ -17,6 +17,11 @@
 		3BDE1AF12C180CF200ADA950 /* CalcUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BDE1AF02C180CF200ADA950 /* CalcUITests.swift */; };
 		3BDE1AF32C180CF200ADA950 /* CalcUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BDE1AF22C180CF200ADA950 /* CalcUITestsLaunchTests.swift */; };
 		3BDE1B002C180D2200ADA950 /* Calculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BDE1AFF2C180D2200ADA950 /* Calculator.swift */; };
+		3BDE1B022C1E674700ADA950 /* GitHubRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BDE1B012C1E674700ADA950 /* GitHubRepository.swift */; };
+		3BDE1B042C1E6A5B00ADA950 /* GitHubAPICllent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BDE1B032C1E6A5B00ADA950 /* GitHubAPICllent.swift */; };
+		3BDE1B072C1E775600ADA950 /* GitHubRepositoryManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BDE1B062C1E775600ADA950 /* GitHubRepositoryManager.swift */; };
+		3BDE1B092C1F3DA200ADA950 /* Cell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3BDE1B082C1F3DA200ADA950 /* Cell.xib */; };
+		3BDE1B0B2C1F3F1900ADA950 /* Cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BDE1B0A2C1F3F1900ADA950 /* Cell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +56,11 @@
 		3BDE1AF02C180CF200ADA950 /* CalcUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalcUITests.swift; sourceTree = "<group>"; };
 		3BDE1AF22C180CF200ADA950 /* CalcUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalcUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		3BDE1AFF2C180D2200ADA950 /* Calculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Calculator.swift; sourceTree = "<group>"; };
+		3BDE1B012C1E674700ADA950 /* GitHubRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubRepository.swift; sourceTree = "<group>"; };
+		3BDE1B032C1E6A5B00ADA950 /* GitHubAPICllent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubAPICllent.swift; sourceTree = "<group>"; };
+		3BDE1B062C1E775600ADA950 /* GitHubRepositoryManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubRepositoryManager.swift; sourceTree = "<group>"; };
+		3BDE1B082C1F3DA200ADA950 /* Cell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Cell.xib; sourceTree = "<group>"; };
+		3BDE1B0A2C1F3F1900ADA950 /* Cell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,7 +114,10 @@
 				3BDE1ACF2C180CEF00ADA950 /* AppDelegate.swift */,
 				3BDE1AD12C180CEF00ADA950 /* SceneDelegate.swift */,
 				3BDE1AD32C180CEF00ADA950 /* ViewController.swift */,
+				3BDE1B052C1E772F00ADA950 /* API */,
 				3BDE1AD52C180CEF00ADA950 /* Main.storyboard */,
+				3BDE1B082C1F3DA200ADA950 /* Cell.xib */,
+				3BDE1B0A2C1F3F1900ADA950 /* Cell.swift */,
 				3BDE1AD82C180CF200ADA950 /* Assets.xcassets */,
 				3BDE1ADA2C180CF200ADA950 /* LaunchScreen.storyboard */,
 				3BDE1ADD2C180CF200ADA950 /* Info.plist */,
@@ -128,6 +141,16 @@
 				3BDE1AF22C180CF200ADA950 /* CalcUITestsLaunchTests.swift */,
 			);
 			path = CalcUITests;
+			sourceTree = "<group>";
+		};
+		3BDE1B052C1E772F00ADA950 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				3BDE1B012C1E674700ADA950 /* GitHubRepository.swift */,
+				3BDE1B032C1E6A5B00ADA950 /* GitHubAPICllent.swift */,
+				3BDE1B062C1E775600ADA950 /* GitHubRepositoryManager.swift */,
+			);
+			path = API;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -235,6 +258,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3BDE1ADC2C180CF200ADA950 /* LaunchScreen.storyboard in Resources */,
+				3BDE1B092C1F3DA200ADA950 /* Cell.xib in Resources */,
 				3BDE1AD92C180CF200ADA950 /* Assets.xcassets in Resources */,
 				3BDE1AD72C180CEF00ADA950 /* Main.storyboard in Resources */,
 			);
@@ -264,6 +288,10 @@
 				3BDE1AD42C180CEF00ADA950 /* ViewController.swift in Sources */,
 				3BDE1B002C180D2200ADA950 /* Calculator.swift in Sources */,
 				3BDE1AD02C180CEF00ADA950 /* AppDelegate.swift in Sources */,
+				3BDE1B042C1E6A5B00ADA950 /* GitHubAPICllent.swift in Sources */,
+				3BDE1B072C1E775600ADA950 /* GitHubRepositoryManager.swift in Sources */,
+				3BDE1B0B2C1F3F1900ADA950 /* Cell.swift in Sources */,
+				3BDE1B022C1E674700ADA950 /* GitHubRepository.swift in Sources */,
 				3BDE1AD22C180CEF00ADA950 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
