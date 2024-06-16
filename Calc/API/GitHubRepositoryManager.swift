@@ -9,7 +9,7 @@ import Foundation
 
 class GitHubRepositoryManager {
 
-    private let client: GitHubAPICllent
+    private let client: GitHubAPIClientProtocol
     private var repos: [GitHubRepository]?
 
     // スター数が10以上のリポジトリを返す(未取得の場合は空)
@@ -18,8 +18,8 @@ class GitHubRepositoryManager {
         return repositories.filter { $0.star >= 10 }
     }
 
-    init() {
-        self.client = GitHubAPICllent()
+    init(client: GitHubAPIClientProtocol) {
+        self.client = client
     }
 
     // 指定されたユーザ名のリポジトリ一覧を読み込み､
