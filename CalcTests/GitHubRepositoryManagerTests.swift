@@ -9,7 +9,7 @@ import XCTest
 @testable import Calc
 
 
-final class GitHubRepositoryMnagerTests: XCTestCase {
+final class GitHubRepositoryManagerTests: XCTestCase {
 
     func testMajorRepositories() {
 

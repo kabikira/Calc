@@ -18,7 +18,7 @@ class GitHubRepositoryManager {
         return repositories.filter { $0.star >= 10 }
     }
 
-    init(client: GitHubAPIClientProtocol) {
+    init(client: GitHubAPIClientProtocol = GitHubAPIClient()) {
         self.client = client
     }
 

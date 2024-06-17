@@ -18,12 +18,12 @@
 		3BDE1AF32C180CF200ADA950 /* CalcUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BDE1AF22C180CF200ADA950 /* CalcUITestsLaunchTests.swift */; };
 		3BDE1B002C180D2200ADA950 /* Calculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BDE1AFF2C180D2200ADA950 /* Calculator.swift */; };
 		3BDE1B022C1E674700ADA950 /* GitHubRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BDE1B012C1E674700ADA950 /* GitHubRepository.swift */; };
-		3BDE1B042C1E6A5B00ADA950 /* GitHubAPICllent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BDE1B032C1E6A5B00ADA950 /* GitHubAPICllent.swift */; };
+		3BDE1B042C1E6A5B00ADA950 /* GitHubAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BDE1B032C1E6A5B00ADA950 /* GitHubAPIClient.swift */; };
 		3BDE1B072C1E775600ADA950 /* GitHubRepositoryManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BDE1B062C1E775600ADA950 /* GitHubRepositoryManager.swift */; };
 		3BDE1B092C1F3DA200ADA950 /* Cell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3BDE1B082C1F3DA200ADA950 /* Cell.xib */; };
 		3BDE1B0B2C1F3F1900ADA950 /* Cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BDE1B0A2C1F3F1900ADA950 /* Cell.swift */; };
 		3BDE1B0D2C1FAC1B00ADA950 /* GitHubRepositoryManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BDE1B0C2C1FAC1B00ADA950 /* GitHubRepositoryManagerTests.swift */; };
-		3BDE1B0F2C1FAEB800ADA950 /* GitHubRepositoryMnagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BDE1B0E2C1FAEB800ADA950 /* GitHubRepositoryMnagerTests.swift */; };
+		3BDE1B0F2C1FAEB800ADA950 /* GitHubRepositoryManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BDE1B0E2C1FAEB800ADA950 /* GitHubRepositoryManagerTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,12 +59,12 @@
 		3BDE1AF22C180CF200ADA950 /* CalcUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalcUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		3BDE1AFF2C180D2200ADA950 /* Calculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Calculator.swift; sourceTree = "<group>"; };
 		3BDE1B012C1E674700ADA950 /* GitHubRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubRepository.swift; sourceTree = "<group>"; };
-		3BDE1B032C1E6A5B00ADA950 /* GitHubAPICllent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubAPICllent.swift; sourceTree = "<group>"; };
+		3BDE1B032C1E6A5B00ADA950 /* GitHubAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubAPIClient.swift; sourceTree = "<group>"; };
 		3BDE1B062C1E775600ADA950 /* GitHubRepositoryManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubRepositoryManager.swift; sourceTree = "<group>"; };
 		3BDE1B082C1F3DA200ADA950 /* Cell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Cell.xib; sourceTree = "<group>"; };
 		3BDE1B0A2C1F3F1900ADA950 /* Cell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cell.swift; sourceTree = "<group>"; };
 		3BDE1B0C2C1FAC1B00ADA950 /* GitHubRepositoryManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubRepositoryManagerTests.swift; sourceTree = "<group>"; };
-		3BDE1B0E2C1FAEB800ADA950 /* GitHubRepositoryMnagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubRepositoryMnagerTests.swift; sourceTree = "<group>"; };
+		3BDE1B0E2C1FAEB800ADA950 /* GitHubRepositoryManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubRepositoryManagerTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,7 +134,7 @@
 			isa = PBXGroup;
 			children = (
 				3BDE1AE62C180CF200ADA950 /* CalcTests.swift */,
-				3BDE1B0E2C1FAEB800ADA950 /* GitHubRepositoryMnagerTests.swift */,
+				3BDE1B0E2C1FAEB800ADA950 /* GitHubRepositoryManagerTests.swift */,
 			);
 			path = CalcTests;
 			sourceTree = "<group>";
@@ -152,7 +152,7 @@
 			isa = PBXGroup;
 			children = (
 				3BDE1B012C1E674700ADA950 /* GitHubRepository.swift */,
-				3BDE1B032C1E6A5B00ADA950 /* GitHubAPICllent.swift */,
+				3BDE1B032C1E6A5B00ADA950 /* GitHubAPIClient.swift */,
 				3BDE1B062C1E775600ADA950 /* GitHubRepositoryManager.swift */,
 				3BDE1B0C2C1FAC1B00ADA950 /* GitHubRepositoryManagerTests.swift */,
 			);
@@ -295,7 +295,7 @@
 				3BDE1B0D2C1FAC1B00ADA950 /* GitHubRepositoryManagerTests.swift in Sources */,
 				3BDE1B002C180D2200ADA950 /* Calculator.swift in Sources */,
 				3BDE1AD02C180CEF00ADA950 /* AppDelegate.swift in Sources */,
-				3BDE1B042C1E6A5B00ADA950 /* GitHubAPICllent.swift in Sources */,
+				3BDE1B042C1E6A5B00ADA950 /* GitHubAPIClient.swift in Sources */,
 				3BDE1B072C1E775600ADA950 /* GitHubRepositoryManager.swift in Sources */,
 				3BDE1B0B2C1F3F1900ADA950 /* Cell.swift in Sources */,
 				3BDE1B022C1E674700ADA950 /* GitHubRepository.swift in Sources */,
@@ -307,7 +307,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3BDE1B0F2C1FAEB800ADA950 /* GitHubRepositoryMnagerTests.swift in Sources */,
+				3BDE1B0F2C1FAEB800ADA950 /* GitHubRepositoryManagerTests.swift in Sources */,
 				3BDE1AE72C180CF200ADA950 /* CalcTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
